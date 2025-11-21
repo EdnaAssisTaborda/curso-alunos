@@ -1,12 +1,128 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tabelas</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Site Modelo - Senac Style</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+
+    header {
+      background-color: #003366;
+      color: white;
+      padding: 15px 30px;
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #FF6600;
+    }
+
+    main {
+      padding-top: 80px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      background-color: #fff;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      border-radius: 6px;
+      overflow: hidden;
+    }
+
+    /* Estilo do título da tabela */
+    .titulo-tabela {
+      background-color: #FF6600; /* Laranja Senac */
+      color: white;
+      font-size: 20px;
+      font-weight: bold;
+      text-align: center;
+      padding: 15px;
+    }
+
+    th {
+      background-color: #0055a5; /* Azul Senac */
+      color: white;
+      padding: 12px;
+      text-align: center;
+    }
+
+    td {
+      border: 1px solid #ddd;
+      padding: 10px;
+      text-align: center;
+    }
+
+    tr:hover {
+      background-color: #f1f1f1;
+    }
+
+    footer p {
+      background-color: #003366;
+      color: white;
+      text-align: center;
+      padding: 8px;
+      margin-top: 40px;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+  </style>
 </head>
 <body>
-    <h1>Tabelas</h1>
-    <p>Linhas e colunas e mesclagens</p>
+  <header>
+    <nav>
+      <a href="tabela.html">Tabela</a>
+      <a href="formulario.html" target="_blank">Formulário</a>
+    </nav>
+  </header>
+
+  <main>
+    <table>
+      <!-- Linha de título mesclada -->
+      <tr>
+        <td colspan="3" class="titulo-tabela">Lista de Participantes</td>
+      </tr>
+      <tr>
+        <th>Nome</th>
+        <th>Idade</th>
+        <th>Cidade</th>
+      </tr>
+      <tr>
+        <td>Ana</td>
+        <td>25</td>
+        <td rowspan="2">Curitiba</td>
+      </tr>
+      <tr>
+        <td>Bruno</td>
+        <td>30</td>
+      </tr>
+      <tr>
+        <td>Carla</td>
+        <td>28</td>
+        <td>Rio de Janeiro</td>
+      </tr>
+    </table>
+  </main>
+
+  <footer>
+    <p>© 2025 - Todos os direitos reservados</p>
+  </footer>
 </body>
 </html>
