@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Contador de Caracteres</title>
+</head>
+<body>
+
+    <h2>Digite uma palavra</h2>
+
+    <form id="formPalavra">
+        <label>Palavra:
+          <input type="text" id="palavra">
+        </label>
+        <button type="submit">Enviar</button>
+    </form>
+
+    <div id="resultado" style="display:none;"></div>
+
+    <script>
+        document.getElementById("formPalavra").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            let palavra = document.getElementById("palavra").value.trim();
+            if (!palavra) {
+                alert("Por favor, digite uma palavra!");
+                return;
+            }
+            let tamanho = palavra.length;
+            let resultado = document.getElementById("resultado");
+            resultado.style.display = "block";
+            resultado.innerHTML = `
+                <p>Você digitou: <strong>${palavra}</strong></p>
+                <p>Quantidade de caracteres: <strong>${tamanho}</strong></p>
+            `;
+        });
+    </script>
+
+</body>
+</html>
